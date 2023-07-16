@@ -1,7 +1,3 @@
-# Hazard was proudly coded by Rdimo (https://github.com/Rdimo).
-# Copyright (c) 2021 Rdimo#6969 | https://Cheataway.com
-# Hazard Nuker under the GNU General Public Liscense v2 (1991).
-
 import requests
 import os
 import shutil
@@ -20,7 +16,7 @@ def search_for_updates():
     # Will add back soon
     clear()
     setTitle("Onix Nuker Checking For Updates. . .")
-    r = requests.get("https://github.com/KDot227/hazard-nuker-mirror/releases/latest")
+    r = requests.get("https://github.com/urizudev/onix-nuker/releases/latest")
 
     soup = str(BeautifulSoup(r.text, "html.parser"))
     s1 = re.search("<title>", soup)
@@ -44,7 +40,7 @@ def search_for_updates():
         )
         soup = BeautifulSoup(
             requests.get(
-                "https://github.com/KDot227/hazard-nuker-mirror/releases"
+                "https://github.com/urizudev/onix-nuker/releases"
             ).text,
             "html.parser",
         )
@@ -74,16 +70,16 @@ def search_for_updates():
                 except Exception:
                     pass
                 shutil.copyfile(cwd + "README.md", "README.md")
-                shutil.rmtree("HazardNuker")
-                setTitle("Hazard Nuker Update Complete!")
+                shutil.rmtree("Onix Nuker")
+                setTitle("Onix Nuker Update Complete!")
                 print(f"{Fore.GREEN}Update Successfully Finished!")
                 sleep(2)
-                os.startfile("HazardNuker.exe")
+                os.startfile("OnixNuker.exe")
                 os._exit(0)
             # if they are running hazard source code
             else:
                 new_version_source = requests.get(
-                    "https://github.com/KDot227/hazard-nuker-mirror/archive/refs/heads/main.zip"
+                    "https://github.com/urizudev/onix-nuker/archive/refs/heads/main.zip"
                 )
                 with open("onix-nuker.zip", "wb") as zipfile:
                     zipfile.write(new_version_source.content)
@@ -93,7 +89,7 @@ def search_for_updates():
                 cwd = os.getcwd() + "\\onix-nuker"
                 shutil.copytree(cwd, os.getcwd(), dirs_exist_ok=True)
                 shutil.rmtree(cwd)
-                setTitle("Hazard Nuker Update Complete!")
+                setTitle("Onix Nuker Update Complete!")
                 print(f"{Fore.GREEN}Update Successfully Finished!")
                 sleep(2)
                 if os.path.exists(os.getcwd() + "setup.bat"):
