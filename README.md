@@ -1,4 +1,4 @@
-<p align= center</p><a href="https://cheataway.com" target="_blank"><img src="https://i.imgur.com/Gml2nvS.png" alt="OnixNuker"></a>
+<p align= center</p><a href="" target="_blank"><img src="https://i.imgur.com/Gml2nvS.png" alt="OnixNuker"></a>
 
 <p align="center">
 <a href="https://github.com/urizudev/onix-nuker#installation">Installation</a> |
